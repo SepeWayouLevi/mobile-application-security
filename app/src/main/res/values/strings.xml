@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">formulaireroche</string>
+    <string name ="title_onglet_alldemands">Demands</string>
+    <string name ="title_onglet_achat">Purchasing</string>
+    <string name ="title_onglet_affairesReglementaires">Law</string>
+    <string name ="title_onglet_pricing">Pricing</string>
+    <string name = "title_onglet_inventoryPlanning">Stock</string>
+
+    <string name="menu_my_requests">My requests</string>
+    <string name="menu_products">Products</string>
+    <string name="menu_infos">Infos</string>
+    <string name ="menu_deconnexion">Logout</string>
+    <string name="deconnexion">Quitter</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name = "purchase_reference_type">D</string>
+    <string name="type_of_reference">type of reference</string>
+    <string name="requester_name">requester name</string>
+    <string name="product_line">Product Line</string>
+    <string name="marking">Marking ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="price_catalog">Price Catalog</string>
+    <string name="product_classification_description">classification Description</string>
+    <string name="enter_a_classification_description">enter a product classification description</string>
+    <string name="type_d_article">Type of article</string>
+    <string name="enter_a_price">enter a price</string>
+    <string name="machine">Machine</string>
+    <string name="the_machine">the machine</string>
+    <string name="name_of_requester">user name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="connexion">Connexion</string>
+    <string name="save">save\n</string>
+
+</resources>
+

@@ -1,0 +1,137 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="auto"
+    android:verticalScrollbarPosition="right"
+    android:visibility="visible"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <!-- Type de référence (Dropdown/Spinner) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/type_of_reference" />
+        <Spinner
+            android:id="@+id/edit_spinner_type_of_reference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!-- Nom du demandeur (EditText) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/requester_name" />
+
+        <EditText
+            android:id="@+id/edit_requester_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_of_requester"
+            android:textSize="22sp" />
+        <!-- Gamme (Dropdown/Spinner) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/product_line" />
+        <Spinner
+            android:id="@+id/edit_spinner_productLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/edit_text_marking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/marking" />
+        <RadioGroup
+            android:id="@+id/edit_radioGroup_Marking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/edit_button_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/edit_button_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <!-- Spinner cachée par défaut -->
+        <Spinner
+            android:id="@+id/edit_options_marking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- Type d'article (Dropdown/Spinner) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/type_d_article" />
+
+        <Spinner
+            android:id="@+id/edit_spinner_type_of_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_classification_description" />
+
+        <EditText
+            android:id="@+id/edit_product_classification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_a_classification_description"
+            android:inputType="text"
+            android:textSize="22sp" />
+
+        <!-- Prix catalogue -->
+        <TextView
+            android:id="@+id/edit_price_catalog_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_catalog" />
+
+        <EditText
+            android:id="@+id/edit_PriceCatalog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_a_price"
+            android:inputType="text"
+            android:textSize="22sp" />
+        <!-- Bouton ok -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ok" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

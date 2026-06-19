@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/loginPage">
+
+    <fragment
+        android:id="@+id/navigation_to_AllDemands"
+        android:name="com.example.forms.onglets.AllDemands.AllDemandsFragment"
+        android:label="Demands"
+        tools:layout="@layout/fragment_alldemands"
+        >
+        <action
+            android:id="@+id/action_allDemands_to_demandDetail"
+            app:destination="@id/demandDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_to_Achats"
+        android:name="com.example.forms.onglets.purchase.PurchaseFragment"
+        android:label="Purchasing"
+        tools:layout="@layout/fragment_purchase" >
+        <action
+            android:id="@+id/action_achat_to_demandDetail"
+            app:destination="@id/demandDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_to_affaires_reglementaires"
+        android:name="com.example.forms.onglets.RegulatoryAffairs.RegulatoryAffairsFragment"
+        android:label="Law"
+        tools:layout="@layout/fragment_regulatory_affairs">
+        <action
+            android:id="@+id/action_affairesReglementaires_to_demandDetail"
+            app:destination="@id/demandDetailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_to_pricing"
+        android:name="com.example.forms.onglets.pricing.PricingFragment"
+        android:label="Pricing"
+        tools:layout="@layout/fragment_pricing" >
+        <action
+            android:id="@+id/action_pricing_to_demandDetail"
+            app:destination="@id/demandDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_to_inventoryPlanning"
+        android:name="com.example.forms.onglets.InventoryPlanning.InventoryPlanningFragment"
+        android:label="Stock"
+        tools:layout="@layout/fragment_inventoryplanning" />
+
+    <fragment
+        android:id="@+id/navigation_to_myRequests"
+        android:name="com.example.forms.onglets.myRequests.MyRequestsFragment"
+        android:label="My requests"
+        tools:layout="@layout/fragment_myrequests" />
+
+    <fragment
+        android:id="@+id/navigation_to_listofProducts"
+        android:name="com.example.forms.onglets.ListOfProducts.ListOfProductsFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_listof_products" />
+    <fragment
+        android:id="@+id/navigation_to_infos"
+        android:name="com.example.forms.onglets.GeneralInfos.GeneralInfosFragment"
+        android:label="Informations"
+        tools:layout="@layout/fragment_general_infos" />
+
+    <fragment
+        android:id="@+id/formulaireFragment"
+        android:name="com.example.forms.onglets.forms.FormsFragment"
+        android:label="Forms" />
+
+   <fragment
+       android:id="@+id/editFragment"
+       android:name="com.example.forms.onglets.edit.EditFragment"
+       android:label="edit"/>
+
+
+    <fragment
+        android:id="@+id/demandDetailFragment"
+        android:name="com.example.forms.onglets.DemandDetails.DemandDetailFragment"
+            android:label="Demand detail" />
+
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.example.forms.onglets.login.LoginFragment"
+        android:label="Login connexion" />
+
+</navigation>

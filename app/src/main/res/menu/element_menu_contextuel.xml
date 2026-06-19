@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_to_myRequests"
+            android:icon="@drawable/my_requests_icon"
+            android:title="@string/menu_my_requests" />
+
+        <item
+            android:id="@+id/navigation_to_listofProducts"
+            android:icon="@drawable/products_icon"
+            android:title="@string/menu_products" />
+
+        <item
+            android:id="@+id/navigation_to_infos"
+            android:icon="@drawable/informations_icon"
+            android:title="@string/menu_infos" />
+
+        <item
+            android:id="@+id/action_logout"
+            android:icon="@drawable/logout_button"
+            android:title= "@string/menu_deconnexion"
+            android:checkable="false" />
+    </group>
+
+</menu>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_to_AllDemands"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_onglet_alldemands"
+        />
+
+    <item
+        android:id="@+id/navigation_to_Achats"
+        android:icon="@drawable/shopping_bag"
+        android:title="@string/title_onglet_achat" />
+
+    <item
+        android:id="@+id/navigation_to_affaires_reglementaires"
+        android:icon="@drawable/balance"
+        android:title="@string/title_onglet_affairesReglementaires" />
+
+    <item
+        android:id="@+id/navigation_to_pricing"
+        android:icon="@drawable/attach_money"
+        android:title="@string/title_onglet_pricing" />
+
+    <item
+        android:id="@+id/navigation_to_inventoryPlanning"
+        android:icon="@drawable/inventory"
+        android:title="@string/title_onglet_inventoryPlanning" />
+
+</menu>

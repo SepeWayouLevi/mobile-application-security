@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/requester_name_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requester"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/pricing_validation_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PricingValidation"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/purchase_validation_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PurchaseValidation"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/regulatory_affairs_validation_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RegulatoryAffairsValidation"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/product_line_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProductLine" />
+
+    <TextView
+        android:id="@+id/article_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Article" />
+
+    <TextView
+        android:id="@+id/type_of_reference_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reference" />
+    <TextView
+        android:id = "@+id/catalog_price_demand_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CatalogPrice"/>
+
+</LinearLayout>
