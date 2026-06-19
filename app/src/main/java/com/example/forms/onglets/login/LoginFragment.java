@@ -38,7 +38,7 @@ public class LoginFragment extends Fragment {
     private LoginViewModel loginViewModel;
     private SecureAuthStore authStore;
 
-    private static final String BASE_URL= "http://X.X.X.X:8080/";
+    private static final String BASE_URL= "http://x.x.x.x:8080/";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

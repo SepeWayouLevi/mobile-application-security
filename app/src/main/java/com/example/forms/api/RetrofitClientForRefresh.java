@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public final class RetrofitClientForRefresh {
-    private static final String BASE_URL = "http://X.X.X.X:8080/";;
+    private static final String BASE_URL = "http://x.x.x.x:8080/";;
     private static AuthService authService;
     public static AuthService getAuthService(SecureAuthStore authStore) {
         if(authService == null){

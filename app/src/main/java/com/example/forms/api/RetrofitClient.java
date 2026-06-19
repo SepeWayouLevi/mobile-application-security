@@ -7,7 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public final class RetrofitClient {
-    private static final String BASE_URL = "http://X.X.X.X:8080/";
+    private static final String BASE_URL = "http://x.x.x.x:8080/";
     private static ApiService apiService;
 
     public static ApiService getApiService(SecureAuthStore authStore) {
