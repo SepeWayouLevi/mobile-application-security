@@ -18,6 +18,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
+
+import com.example.forms.BuildConfig;
 import com.example.forms.R;
 import com.example.forms.api.ApiService;
 import com.example.forms.api.RetrofitClient;
@@ -226,8 +228,6 @@ public class EditFragment extends Fragment {
         });
 
 
-
-
         editProductClassificationDescription.setText(demand.getProductClassificationDescription());
         editProductClassificationDescription.addTextChangedListener(new SimpleTextWatcher() {
             @Override
@@ -245,12 +245,6 @@ public class EditFragment extends Fragment {
 
         });
 
-
-
-
-
-
-
         myButtonOk.setOnClickListener(v -> {
             String token = null;
             try {
@@ -263,13 +257,6 @@ public class EditFragment extends Fragment {
                 return;
             }
 
-            String vmValue = editViewModel.typeOfMarking.getValue();
-            String demandValue = demand.getTypeOfMarking();
-
-            Log.d("TEST", "ViewModel value = " + vmValue);
-            Log.d("TEST", "Demand value = " + demandValue);
-
-
             String newTypeOfReference = editViewModel.typeOfReference.getValue() != null ? editViewModel.typeOfReference.getValue(): demand.getTypeOfReference() ;
             String newRequesterName = editViewModel.requesterName.getValue() != null ? editViewModel.requesterName.getValue() : demand.getRequesterName();
             String newProductLine = editViewModel.productLine.getValue() != null ? editViewModel.productLine.getValue() : demand.getProductLine();
@@ -277,8 +264,6 @@ public class EditFragment extends Fragment {
             String newProductClassification = editViewModel.productClassificationDescription.getValue() != null ? editViewModel.productClassificationDescription.getValue() : demand.getProductClassificationDescription();
             boolean newMarking = editViewModel.marking.getValue() != null ? editViewModel.marking.getValue(): demand.isMarking();
             String newTypeOfMarking = editViewModel.typeOfMarking.getValue() != null ? editViewModel.typeOfMarking.getValue() : demand.getTypeOfMarking() ;
-
-            Log.d("TEST", "newTypeOfMarking finale = " + newTypeOfMarking);
 
 
             if (newMarking && (newTypeOfMarking == null || newTypeOfMarking.isEmpty())) {
@@ -302,9 +287,7 @@ public class EditFragment extends Fragment {
             demand.setProductClassificationDescription(newProductClassification);
             demand.setPriceCatalog(priceCatalog);
             demand.setMarking(newMarking);
-            demand.setMarkingType(newTypeOfMarking);
-            System.out.println("demande after " + demand.setMarkingType(newTypeOfMarking));
-
+            demand.setTypeOfMarking(newTypeOfMarking);
 
             apiService.editUserRequest(demand.getId(), demand).enqueue(new Callback<Void>() {
                 @Override

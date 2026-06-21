@@ -226,7 +226,6 @@ public class FormsFragment extends Fragment  {
                     typeOfMarkingViewModel,
                     email,
                     statusID
-                    //id_marquage
             );
 
             if((typeOfReferenceViewModel.equals("B") || typeOfReferenceViewModel.equals("C")) && markingViewModel){
@@ -488,7 +487,6 @@ public class FormsFragment extends Fragment  {
     }
 
 
-    // Méthode utilitaire générique pour lancer un PATCH
     private void enqueuePatch(Call<Void> call, String label ) {
         call.enqueue(new Callback<Void>() {
             @Override
@@ -508,10 +506,6 @@ public class FormsFragment extends Fragment  {
         });
     }
 
-
-
-
-    // Petite classe utilitaire pour simplifier l'usage de TextWatcher
     public abstract static class SimpleTextWatcher implements TextWatcher {
         @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
         @Override public void afterTextChanged(Editable s) { }

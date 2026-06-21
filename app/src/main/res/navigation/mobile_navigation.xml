@@ -48,7 +48,7 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_to_inventoryPlanning"
+        android:id="@+id/navigation_to_inventory_planning"
         android:name="com.example.forms.onglets.InventoryPlanning.InventoryPlanningFragment"
         android:label="Stock"
         tools:layout="@layout/fragment_inventoryplanning" />
@@ -57,7 +57,11 @@
         android:id="@+id/navigation_to_myRequests"
         android:name="com.example.forms.onglets.myRequests.MyRequestsFragment"
         android:label="My requests"
-        tools:layout="@layout/fragment_myrequests" />
+        tools:layout="@layout/fragment_myrequests">
+    <action
+        android:id="@+id/action_affairesReglementaires_to_demandDetail"
+        app:destination="@id/demandDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_to_listofProducts"
@@ -90,5 +94,4 @@
         android:id="@+id/loginPage"
         android:name="com.example.forms.onglets.login.LoginFragment"
         android:label="Login connexion" />
-
 </navigation>

@@ -24,7 +24,7 @@
         android:title="@string/title_onglet_pricing" />
 
     <item
-        android:id="@+id/navigation_to_inventoryPlanning"
+        android:id="@+id/navigation_to_inventory_planning"
         android:icon="@drawable/inventory"
         android:title="@string/title_onglet_inventoryPlanning" />
 

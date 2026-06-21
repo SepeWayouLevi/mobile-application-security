@@ -18,8 +18,8 @@ plugins {
 
     buildTypes {
         release {
-            isMinifyEnabled = false  // A activer à la fin du projet
-            isShrinkResources =  false  // A activer à la fin du projet
+            isMinifyEnabled = false
+            isShrinkResources =  false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

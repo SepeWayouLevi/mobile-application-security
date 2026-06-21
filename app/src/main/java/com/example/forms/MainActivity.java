@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_to_Achats,
                 R.id.navigation_to_affaires_reglementaires,
                 R.id.navigation_to_pricing,
-                R.id.navigation_to_inventoryPlanning ,
+                R.id.navigation_to_inventory_planning ,
                 R.id.navigation_to_myRequests,
                 R.id.navigation_to_listofProducts,
                 R.id.navigation_to_infos
@@ -138,16 +138,16 @@ public class MainActivity extends AppCompatActivity {
                     case "ROLE_ADMIN":
                         bottomNav.setVisibility(View.VISIBLE);
                         binding.boutonPlus.setVisibility(View.VISIBLE);
-                        bottomNav.getMenu().findItem(R.id.navigation_to_inventoryPlanning).setVisible(true);
+                        bottomNav.getMenu().findItem(R.id.navigation_to_AllDemands).setVisible(true);
+                        bottomNav.getMenu().findItem(R.id.navigation_to_inventory_planning).setVisible(true);
                         bottomNav.getMenu().findItem(R.id.navigation_to_affaires_reglementaires).setVisible(true);
                         bottomNav.getMenu().findItem(R.id.navigation_to_Achats).setVisible(true);
                         bottomNav.getMenu().findItem(R.id.navigation_to_pricing).setVisible(true);
-                        bottomNav.getMenu().findItem(R.id.navigation_to_AllDemands).setVisible(true);
                         binding.navDrawerView.getMenu().findItem(R.id.navigation_to_myRequests).setVisible(true);
                         binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                         break;
                     case "ROLE_PRICING":
-                        bottomNav.getMenu().findItem(R.id.navigation_to_inventoryPlanning).setVisible(false);
+                        bottomNav.getMenu().findItem(R.id.navigation_to_inventory_planning).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_affaires_reglementaires).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_Achats).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_pricing).setVisible(true);
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                         break;
                     case "ROLE_LAW":
-                        bottomNav.getMenu().findItem(R.id.navigation_to_inventoryPlanning).setVisible(false);
+                        bottomNav.getMenu().findItem(R.id.navigation_to_inventory_planning).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_affaires_reglementaires).setVisible(true);
                         bottomNav.getMenu().findItem(R.id.navigation_to_Achats).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_pricing).setVisible(false);
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                         binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                         break;
                     case "ROLE_PURCHASE":
-                        bottomNav.getMenu().findItem(R.id.navigation_to_inventoryPlanning).setVisible(false);
+                        bottomNav.getMenu().findItem(R.id.navigation_to_inventory_planning).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_affaires_reglementaires).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_Achats).setVisible(true);
                         bottomNav.getMenu().findItem(R.id.navigation_to_pricing).setVisible(false);
@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                         binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                         break;
                     case "ROLE_STOCK":
-                        bottomNav.getMenu().findItem(R.id.navigation_to_inventoryPlanning).setVisible(true);
+                        bottomNav.getMenu().findItem(R.id.navigation_to_inventory_planning).setVisible(true);
                         bottomNav.getMenu().findItem(R.id.navigation_to_affaires_reglementaires).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_Achats).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_pricing).setVisible(false);
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                         binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                         break;
                     case "ROLE_GENERAL":
-                        bottomNav.getMenu().findItem(R.id.navigation_to_inventoryPlanning).setVisible(false);
+                        bottomNav.getMenu().findItem(R.id.navigation_to_inventory_planning).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_affaires_reglementaires).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_Achats).setVisible(false);
                         bottomNav.getMenu().findItem(R.id.navigation_to_pricing).setVisible(false);

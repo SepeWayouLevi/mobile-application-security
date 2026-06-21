@@ -3,9 +3,11 @@ package com.example.forms.security;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.util.Base64;
 
 
+import com.example.forms.BuildConfig;
 import com.google.crypto.tink.Aead;
 import com.google.crypto.tink.KeyTemplate;
 import com.google.crypto.tink.KeysetHandle;
@@ -55,7 +57,6 @@ public class SecureAuthStore {
                 token.getBytes(StandardCharsets.UTF_8),
                 ASSOCIATED_DATA.getBytes(StandardCharsets.UTF_8)
         );
-        // On stocke en Base64 pour pouvoir mettre dans SharedPreferences
         String encoded = Base64.encodeToString(ciphertext, Base64.NO_WRAP);
         prefs.edit().putString(key, encoded).apply();
     }
@@ -74,12 +75,6 @@ public class SecureAuthStore {
         return new String(plaintext, StandardCharsets.UTF_8);
     }
 
-    public void setToken(String accessToken ,String refreshToken)  {
-        prefs.edit()
-                .putString(KEY_ACCESS,accessToken)
-                .putString(KEY_REFRESH,refreshToken)
-                .apply();
-    }
 
     public void setAccessToken(String accessToken) throws GeneralSecurityException{
         encryptToken(KEY_ACCESS, accessToken);
@@ -124,7 +119,6 @@ public class SecureAuthStore {
             isExpired = true;
             return isExpired;
         }
-
         return isExpired;
     }
 
@@ -138,7 +132,11 @@ public class SecureAuthStore {
             JSONObject payloadInTheCorrectFormat  =  new JSONObject(payloadOfTheToken);
             long  tokenExpiration = payloadInTheCorrectFormat.getLong("exp") ;
             float tokenExpirationInMinutes = (tokenExpiration - (System.currentTimeMillis() / 1000))/ 60f ;
-            System.out.println(">>>> TOKEN EXPIRE IN " + tokenExpirationInMinutes + "MINUTES");
+
+            if(BuildConfig.DEBUG){
+                System.out.println(">>>> TOKEN EXPIRE IN " + tokenExpirationInMinutes + "MINUTES");
+            }
+
             if(tokenExpirationInMinutes <= 1){
                 isAboutToExpired =  true;
                 return isAboutToExpired;
@@ -158,8 +156,6 @@ public class SecureAuthStore {
         byte[] bytes = Base64.decode(base64Url, Base64.URL_SAFE | Base64.NO_WRAP);
         return new String(bytes, StandardCharsets.UTF_8);
     }
-
-
 
 
     public String getEmailFromToken(String theToken) {

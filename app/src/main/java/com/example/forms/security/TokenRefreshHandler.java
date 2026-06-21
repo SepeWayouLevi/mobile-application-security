@@ -1,6 +1,7 @@
 package com.example.forms.security;
 import android.util.Log;
 
+import com.example.forms.BuildConfig;
 import com.example.forms.api.AuthService;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
@@ -15,16 +16,22 @@ public class TokenRefreshHandler {
     }
     public Boolean execute() throws IOException, GeneralSecurityException {
         boolean isSuccess  =  false;
-        System.out.println("testing something " + !isSuccess);
-        Log.d("IN TOKEN REFRESH HANDLER", ">>> TRYING TO EXECUTE "  ) ;
+        if(BuildConfig.DEBUG){
+            System.out.println("testing something " + !isSuccess);
+            Log.d("IN TOKEN REFRESH HANDLER", ">>> TRYING TO EXECUTE "  ) ;
+        }
 
         retrofit2.Response<Map<String,String>> refreshResponse = authService
                 .getAccessToken()
                 .execute();
         if (refreshResponse.isSuccessful() && refreshResponse.body() != null) {
-            Log.d("From token RefreshHandler response is successful", ">>> Saving the new access token"  ) ;
+            if(BuildConfig.DEBUG){
+                Log.d("From token RefreshHandler response is successful", ">>> Saving the new access token"  ) ;
+            }
             Map<String,String> body = refreshResponse.body();
-            Log.d("From token RefreshHandler", ">>> following request with an accessToken" + body);
+            if(BuildConfig.DEBUG){
+                Log.d("From token RefreshHandler", ">>> following request with an accessToken" + body);
+            }
             String newAccessToken  = body.get("access_token") ;
 
             authStore.setAccessToken(newAccessToken);

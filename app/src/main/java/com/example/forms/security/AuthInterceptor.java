@@ -1,6 +1,9 @@
 package com.example.forms.security;
 import android.util.Log;
 import androidx.annotation.NonNull;
+
+import com.example.forms.BuildConfig;
+
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import okhttp3.Interceptor;
@@ -37,11 +40,13 @@ public class AuthInterceptor implements Interceptor {
         } catch (GeneralSecurityException e) {
             throw new RuntimeException(e);
         }
+        if(BuildConfig.DEBUG){
+            Log.d("AUTH_INTERCEPTOR", "accessToken null ? " + (accessToken == null));
+            Log.d("AUTH_INTERCEPTOR", "tokenIsAboutToExpired ? " + authStore.tokenIsAboutToExpire(accessToken));
+            Log.d("AUTH_INTERCEPTOR", "refreshToken null ? " + (refreshToken == null));
+            Log.d("AUTH_INTERCEPTOR", "refreshToken expired ? " + authStore.isTokenExpired(refreshToken));
+        }
 
-        Log.d("AUTH_INTERCEPTOR", "accessToken null ? " + (accessToken == null));
-        Log.d("AUTH_INTERCEPTOR", "tokenIsAboutToExpired ? " + authStore.tokenIsAboutToExpire(accessToken));
-        Log.d("AUTH_INTERCEPTOR", "refreshToken null ? " + (refreshToken == null));
-        Log.d("AUTH_INTERCEPTOR", "refreshToken expired ? " + authStore.isTokenExpired(refreshToken));
 
         if ((accessToken == null || authStore.tokenIsAboutToExpire(accessToken))
                 && (!authStore.isTokenExpired(refreshToken) && refreshToken != null)){
